@@ -41,6 +41,7 @@ gem 'neat'
 gem 'daemons'
 gem 'delayed_job_active_record'
 
+gem 'carrierwave'
 gem "selenium-webdriver"
 
 group :development do
