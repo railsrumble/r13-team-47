@@ -43,6 +43,8 @@ group :development do
   gem "binding_of_caller"
 end
 
+gem 'PageRankr'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
