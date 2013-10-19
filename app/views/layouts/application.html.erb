@@ -39,19 +39,14 @@
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
   <!-- Add your site or application content here -->
   <header>
     <div class="wrapper">
-      <div class="nav-main">
-        <nav>
-          <ul>
-            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
-            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
-            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
-            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
-          </ul>
-        </nav>
-      </div>
+      <%= render 'nav_main' %>
     </div>
   </header>
 
