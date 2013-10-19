@@ -35,6 +35,22 @@ unless Team.find_by(name: 'Muppet')
               description: Faker::Lorem::sentences(5).join(' ')
 end
 
+unless Team.find_by(name: 'Long team name for test')
+  Team.create name: 'Long team name for test',
+              url: 'http://ltnft.com',
+              level: 72,
+              score: 23214234,
+              description: Faker::Lorem::sentences(15).join(' ')
+end
+
+unless Team.find_by(name: 'SEBP Team')
+  Team.create name: 'SEBP Team',
+              url: 'http://sebp.example.com',
+              level: 74,
+              score: 2214234,
+              description: Faker::Lorem::sentences(15).join(' ')
+end
+
 # # # # # # # # #
 # Sample users
 # # # # # # # # #
