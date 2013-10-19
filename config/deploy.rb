@@ -62,6 +62,8 @@ set :admin_runner,               "www-data"
 #
 ssh_options[:keys] = ["~/.ssh/id_rsa"]
 
+set :delayed_job_command, "bin/delayed_job"
+
 # SCM Options
 set :scm,        :git
 set :repository, "git@github.com:railsrumble/#{GITHUB_REPOSITORY_NAME}.git"
