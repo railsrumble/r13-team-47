@@ -7,6 +7,8 @@
           %li= link_to 'Manage', edit_team_url(current_user.teams.first), class: 'hard-shadow'
         - else
           %li= link_to 'Add new team', new_team_url, class: 'hard-shadow'
+      - else
+        %li= link_to 'Home', root_url, class: 'hard-shadow'
       %li= link_to 'Leaderboard', teams_url, class: 'hard-shadow'
       %li= link_to 'About', '/about/', class: 'hard-shadow'
       %li
