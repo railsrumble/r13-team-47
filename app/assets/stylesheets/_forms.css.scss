@@ -1,0 +1,43 @@
+form {
+  .input {
+    $input-padding: 0.25rem;
+
+    @include outer-container;
+
+    margin-bottom: 0.5rem;
+
+    &.team_name, 
+    &.team_url {
+      font-size: 2em;
+    }
+
+    .control-label {
+      @include span-columns(3);
+
+      padding: $input-padding;
+    }
+
+    #{$all-text-inputs},
+    textarea {
+      @include span-columns(9);
+      @include omega();
+
+      padding: $input-padding;
+    }
+
+    .hint {
+      @include shift(3);
+      @include span-columns(9);
+      @include omega();
+    }
+
+    textarea {
+      height: 10em;
+    }
+
+  }
+
+  .btns {
+    text-align: right;
+  }
+}
