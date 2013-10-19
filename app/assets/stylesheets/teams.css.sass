@@ -6,15 +6,21 @@ $ribbon_size: 4.5em
   position: relative
   overflow: hidden
   vertical-align: top
+  @include transition(all 0.5s ease-in-out)
   &:hover 
     background-color: lighten($light_blue, 20%)
     @include transition(all 0.5s ease-in-out)
+    .score .arrow
+      @include transition(all 0.5s ease-in-out)
+      right: 0.5em
     .ribbon
+      @include transition(all 0.5s ease-in-out)
       border-top: $ribbon_size / 2 solid $light-blue
       border-right: $ribbon_size / 2 solid $light-blue
       border-left: $ribbon_size / 2 solid transparent
       border-bottom: $ribbon_size / 2 solid transparent
-      .position
+    .button.green 
+      background-color: darken($green, 10%)
   .name
     width: 80%
   .url a
@@ -22,13 +28,30 @@ $ribbon_size: 4.5em
     font-size: 1.2em
   h2, h3 
     margin: 0
+  .score 
+    position: relative
+    overflow: hidden
+    .arrow 
+      @include transition(all 0.5s ease-in-out)
+      color: $white
+      font-size: 2.5em
+      height: 100%
+      line-height: 0.6em
+      position: absolute
+      text-align: right
+      top: 0
+      right: -0.5em
   .ribbon
+    @include transition(all 0.5s ease-in-out)
     position: absolute
     right: 0
     top: 0
     width: $ribbon_size
     height: $ribbon_size
-    border: $ribbon_size / 2 solid transparent
+    border-top: $ribbon_size / 2 solid $dark-blue
+    border-right: $ribbon_size / 2 solid $dark-blue
+    border-left: $ribbon_size / 2 solid transparent
+    border-bottom: $ribbon_size / 2 solid transparent
     .position
       font-size: 1.8em
       position: absolute

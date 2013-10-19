@@ -5,7 +5,9 @@
     %h2.name= link_to team.name, team_path(team)
     %h3.level= link_to 'level ' + team.level.to_s, team_path(team)
     .url= link_to team.url, team_path(team)
-    .score= link_to number_with_delimiter(team.score) + ' points', team_path(team), class: 'button green'
+    .score
+      .arrow >
+      = link_to number_with_delimiter(team.score) + ' points', team_path(team), class: 'button green'
     .ribbon
       %span.position= counter.ordinalize
   - counter += 1
