@@ -5,7 +5,10 @@ class SessionsController < ApplicationController
     authentication = 
       Authentication.where(provider: auth.provider, uid: auth.uid).first || 
       Authentication.create(provider: auth.provider, uid: auth.uid)
-    user = authentication.user || authentication.create_user(login: auth.info.nickname)
+
+    user = authentication.user || User.create(login: auth.info.nickname).tap do |user|
+      authentication.update(user: user)
+    end
 
     session[:user_id] = user.id
 
