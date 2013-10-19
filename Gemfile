@@ -47,6 +47,10 @@ gem 'guard'
 gem 'daemons'
 gem 'delayed_job_active_record'
 
+gem 'carrierwave'
+gem 'selenium-webdriver'
+gem 'mini_magick'
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"

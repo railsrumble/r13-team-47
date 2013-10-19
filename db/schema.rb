@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019110848) do
+ActiveRecord::Schema.define(version: 20131019132311) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id"
@@ -42,17 +42,10 @@ ActiveRecord::Schema.define(version: 20131019110848) do
     t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "screenshot"
   end
 
   add_index "scores", ["site_id"], name: "index_scores_on_site_id", using: :btree
-
-  create_table "screenshots", force: true do |t|
-    t.integer  "score_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "screenshots", ["score_id"], name: "index_screenshots_on_score_id", using: :btree
 
   create_table "sites", force: true do |t|
     t.string   "url"

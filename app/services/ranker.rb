@@ -6,14 +6,14 @@ class Ranker < Struct.new(:url)
 
   def rank
     rank_engines.inject(0) do |result, engine|
-      result += engine.run(url)
+      result + engine.run(url)
     end
   end
 
   private
 
   def rank_engines
-    [AlexaRanker]
+    [ AlexaRanker ]
   end
 
 end
