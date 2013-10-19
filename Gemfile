@@ -41,6 +41,8 @@ gem 'neat'
 gem 'daemons'
 gem 'delayed_job_active_record'
 
+gem "selenium-webdriver"
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
