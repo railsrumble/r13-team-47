@@ -63,15 +63,15 @@ ActiveRecord::Schema.define(version: 20131019154239) do
     t.datetime "updated_at"
   end
 
+  create_table "teams_users", force: true do |t|
+    t.integer "user_id"
+    t.integer "team_id"
+  end
+
   create_table "users", force: true do |t|
     t.string   "login"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "users_works", force: true do |t|
-    t.integer "user_id"
-    t.integer "work_id"
   end
 
   create_table "works", force: true do |t|

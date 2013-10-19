@@ -1,4 +1,4 @@
-class AddHabtmTableBetweenUsersAndWorks < ActiveRecord::Migration
+class AddHabtmTableBetweenTeamsAndUsers < ActiveRecord::Migration
   def change
     create_table :teams_users do |t|
       t.belongs_to :user
