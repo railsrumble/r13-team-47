@@ -52,7 +52,6 @@ gem 'selenium-webdriver'
 gem 'mini_magick'
 
 gem 'simple_form'
-gem 'inherited_resources'
 
 gem 'friendly_id'
 
