@@ -1,0 +1,6 @@
+- @teams.each do |team|
+  .team 
+    .name= link_to(team.name, team_path(team))
+    .url= link_to(team.url, team_path(team)
+    .level= link_to(team.level, team_path(team)
+    .score.green-button= link_to(team.score, team_path(team)
