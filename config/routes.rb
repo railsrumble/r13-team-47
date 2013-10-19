@@ -2,10 +2,13 @@ PinkTeam::Application.routes.draw do
   root :to => "web_weight#index"
   
   get '/auth/:provider/callback', to: 'sessions#create'
+  get "/logout/" => "sessions#destroy", :as => :logout
 
   resources :teams do
     resources :works
   end
+
+  get ':action', controller: 'web_weight'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
