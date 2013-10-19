@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem "rails-boilerplate"
+
 # Use mysql as the database for Active Record
 gem 'mysql2'
 
@@ -26,6 +28,20 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+gem 'omniauth'
+gem 'omniauth-github'
+
+gem 'haml'
+gem 'sass'
+
+gem 'bourbon'
+gem 'neat'
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
