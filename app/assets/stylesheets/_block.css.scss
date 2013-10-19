@@ -1,0 +1,82 @@
+.hard-shadow{
+  display: inline-block;
+  color: white;
+  background: $light-blue;
+  box-shadow: 5px 5px 0px opacify($dark-blue, 1);
+  padding: 0.2em;
+}
+
+.button{
+  padding: 0.3em;
+  &:link,
+  &:visited{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+  }
+  &.green{
+    background: $green;
+    &:hover{
+      background-color: darken($green, 10%);
+    }
+  }
+}
+
+@mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
+  $shadow: '';
+  @if $skew == false or $type == text{
+    @if $direction == right {
+      @for $i from 0 to $length - 1 {
+        $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $color + ',';
+      }
+    }
+    @if $direction == left {
+      @for $i from 0 to $length - 1 {
+        $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $color + ',';
+       }
+      }
+     }
+        
+   @if $fadeout == true{
+    @for $i from 1 to $length - 1 {
+      @if $type == text or $skew == false{
+        @if $direction == right{
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+        }
+        @if $direction == left{
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+        }
+      }
+      @if ($type == box) and $skew == true{
+        @if $direction == right {
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+        }
+        @if $direction == left {
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + $i * .2 + 'px ' + rgba($color, 1 - $i / $length) + ',';
+        }
+      }
+  }
+  $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba($color, 0);
+ }
+ @if $fadeout == false{
+   @if $skew == true and ( $type == box ){
+     @for $i from 0 to $length - 1 {
+            $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + $i * .1 + 'px ' + $color + ',';
+      }
+   }
+    $shadow: $shadow + $length + 'px ' + $length + 'px 0 ' + rgba(0,0,0,0);
+ }
+ $shadow: unquote($shadow);
+  @if $type == 'box' {box-shadow: $shadow;}
+  @if $type == 'text' {text-shadow: $shadow;}
+}
+
+ .long-shadow {
+  @include long-shadow(box, darken($green, 20%), 100, false, false);
+  }
+
+.clearfix{
+  width: 100%;
+  display: block;
+  clear: both;
+}
