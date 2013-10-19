@@ -1,4 +1,4 @@
 class Score < ActiveRecord::Base
   belongs_to :site
-  has_one :screenshot
+  mount_uploader :screenshot, ScreenshotUploader
 end

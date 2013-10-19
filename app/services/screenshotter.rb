@@ -7,7 +7,8 @@ class Screenshotter < Struct.new(:url)
   def screenshot
     driver.navigate.to url
     driver.manage.window.resize_to(default_width,default_height)
-    driver.save_screenshot(temp_path)
+    file = driver.save_screenshot(temp_path)
+    file.path
   end
   
   private 
