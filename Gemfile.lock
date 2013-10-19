@@ -50,7 +50,13 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    daemons (1.1.9)
     debug_inspector (0.0.2)
+    delayed_job (4.0.0)
+      activesupport (>= 3.0, < 4.1)
+    delayed_job_active_record (4.0.0)
+      activerecord (>= 3.0, < 4.1)
+      delayed_job (>= 3.0, < 4.1)
     erubis (2.7.0)
     execjs (2.0.2)
     faraday (0.8.8)
@@ -173,6 +179,8 @@ DEPENDENCIES
   binding_of_caller
   bourbon
   coffee-rails (~> 4.0.0)
+  daemons
+  delayed_job_active_record
   haml
   jbuilder (~> 1.2)
   jquery-rails

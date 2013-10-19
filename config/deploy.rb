@@ -1,4 +1,5 @@
 require 'bundler/capistrano'
+require 'delayed/recipes'
 
 # This capistrano deployment recipe is made to work with the optional
 # StackScript provided to all Rails Rumble teams in their Linode dashboard.
@@ -90,3 +91,7 @@ deploy.task :restart, :roles => :app do
   # Restart Application
   run "touch #{current_path}/tmp/restart.txt"
 end
+
+after "deploy:stop",    "delayed_job:stop"
+after "deploy:start",   "delayed_job:start"
+after "deploy:restart", "delayed_job:restart"
