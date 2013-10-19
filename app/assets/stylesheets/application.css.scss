@@ -85,44 +85,41 @@
 }
 
 body {
-  .container {
-    overflow-x: hidden;
-
-    > header,
-    > section,
-    > footer {
-      .wrapper {
-        @include outer-container;
-        
-        aside { 
-          @include span-columns(3); 
-        }
-        
-        article { 
-          @include span-columns(9); 
-        }
+  overflow-x: hidden;
+  > header,
+  > section,
+  > footer {
+    .wrapper {
+      @include outer-container;
+      
+      aside { 
+        @include span-columns(3); 
+      }
+      
+      article { 
+        @include span-columns(9); 
       }
     }
+  }
 
-    > header {
-      @extend %diagonal-separator-bottom;
+  > header {
+    @extend %diagonal-separator-bottom;
 
-      background: $light-blue;
-      color: white;
-    }
+    background: $light-blue;
+    color: white;
+  }
 
-    > section {
-      @include clearfix;
+  > section {
+    @include clearfix;
 
-      background: $light-blue;
-      color: white;
-    }
+    background: $light-blue;
+    color: white;
+  }
 
-    > footer {
-      @extend %diagonal-separator-top;
+  > footer {
+    @extend %diagonal-separator-top;
 
-      background: $light-blue;
-      color: $sad-blue;
-    }
+    background: $light-blue;
+    color: $sad-blue;
   }
 }

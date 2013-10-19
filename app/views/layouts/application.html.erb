@@ -35,41 +35,39 @@
   <%= javascript_tag "Modernizr.load();" %>
 </head>
 <body>
-  <div class="container">
-    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-         chromium.org/developers/how-tos/chrome-frame-getting-started -->
-    <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-    <!-- Add your site or application content here -->
-    <header>
-      <div class="wrapper">
-        <div class="nav-main">
-          <nav>
-            <ul>
-              <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
-              <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
-              <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
-              <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
-            </ul>
-          </nav>
-        </div>
+  <!-- Add your site or application content here -->
+  <header>
+    <div class="wrapper">
+      <div class="nav-main">
+        <nav>
+          <ul>
+            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
+            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
+            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
+            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
+          </ul>
+        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <section>
-      <div class="wrapper">
-        <%= yield %>
-      </div>
-    </section>
+  <section>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
+  </section>
 
-    <footer>
-      <div class="wrapper">
-        <div class="footer">
-          <p><a href="#">Credits</a></p>
-        </div>
+  <footer>
+    <div class="wrapper">
+      <div class="footer">
+        <p><a href="#">Credits</a></p>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
   <%= javascript_include_tag 'application' %>
