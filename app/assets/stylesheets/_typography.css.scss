@@ -30,15 +30,21 @@ body {
 h1{
     font-size: 3em;
     margin: 0.5em 0.2em;
-    text-align: right;
+    text-align: center;
+    font-weight: normal;
+    &.title{
+        text-align: right;
+    }
 }
 
 h2{
     font-size: 2em;
     margin: 0.3em 0;
+    font-weight: normal;
 }
 
 h3{
     font-size: 1.5em;
     margin: 0.1em 0;
+    font-weight: normal;
 }

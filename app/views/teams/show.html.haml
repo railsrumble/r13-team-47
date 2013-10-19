@@ -1,0 +1,8 @@
+- team = @team
+.team_detail
+  %h1= team.name
+  %h2= team.url
+  %article.full= team.description
+  .clearfix
+  .green.button.long-shadow= 'level ' + team.level.to_s
+  .green.button.long-shadow= team.score.to_s + ' points'
