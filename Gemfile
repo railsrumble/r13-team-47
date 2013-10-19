@@ -58,6 +58,10 @@ gem 'friendly_id'
 
 gem 'simple_form'
 
+gem 'cancan'
+
+gem 'redcarpet'
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
