@@ -193,6 +193,9 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0.0)
       websocket (~> 1.0.4)
+    simple_form (3.0.0)
+      actionpack (>= 4.0.0, < 4.1)
+      activemodel (>= 4.0.0, < 4.1)
     slop (3.4.6)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -257,6 +260,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   selenium-webdriver
+  simple_form
   sprockets-sass
   therubyracer
   turbolinks
