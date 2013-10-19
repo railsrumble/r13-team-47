@@ -11,7 +11,6 @@
 
 @import "sessions";
 @import "web_weight";
-
 @import "teams";
 @import "team";
 
@@ -140,5 +139,21 @@ body {
 
     background: $light-blue;
     color: $sad-blue;
+
+    p {
+      font-size: 2em;
+    }
+
+    a {
+      &:link, &:visited {
+        text-decoration: none;
+        color: $sad-blue;
+      }      
+
+      &:hover {
+        color: $dark-blue;
+        text-decoration: underline;
+      }
+    }
   }
 }
