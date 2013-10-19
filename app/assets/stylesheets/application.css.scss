@@ -58,7 +58,7 @@
 }
 
 %diagonal-separator-bottom {
-  $padding-bottom: 4em;
+  $padding-bottom: 5em;
 
   @extend %diagonal-separator;
 
@@ -89,6 +89,17 @@
 body {
   overflow-x: hidden;
   font-style: 16px;
+
+  > .notice {
+    text-align: center;
+    color: white;
+    background: $green;
+    margin-bottom: 1em;
+    position: relative;
+    text-align: center;
+    z-index: 1000;
+  }
+
   > header,
   > section,
   > footer {
@@ -108,8 +119,10 @@ body {
   > header {
     @extend %diagonal-separator-bottom;
 
+    text-align: right;
     background: $light-blue;
     color: white;
+    margin-top: 0.5em;
   }
 
   > section {
