@@ -36,6 +36,7 @@
   @extend %diagonal-separator;
 
   padding-top: $padding-top;
+  overflow: hidden;
 
   &:before,
   &:after {
@@ -131,8 +132,10 @@ body {
   > section {
     @include clearfix;
 
+    padding-bottom: 1em;
     background: $light-blue;
     color: white;
+
   }
 
   > footer {
