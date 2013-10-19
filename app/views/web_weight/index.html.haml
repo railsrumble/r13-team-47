@@ -1,1 +1,7 @@
-= link_to "Sign in with Github", "/auth/github"
+%article
+  .text-block
+    %p= Faker::Lorem::sentences(10).join(' ')
+
+  .nav-session
+    %ul
+      %li= link_to "Sign in with Github", "/auth/github"

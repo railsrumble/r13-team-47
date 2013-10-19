@@ -35,8 +35,14 @@ gem 'omniauth-github'
 gem 'haml'
 gem 'sass'
 
+gem 'sprockets-sass'
+
 gem 'bourbon'
 gem 'neat'
+
+gem 'faker'
+
+gem 'guard'
 
 group :development do
   gem "better_errors"

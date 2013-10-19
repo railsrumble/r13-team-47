@@ -40,9 +40,28 @@
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
   <!-- Add your site or application content here -->
+  <header>
+    <div class="nav-main">
+      <nav>
+        <ul>
+          <li><a href="#"><%= Faker::Lorem::words.join(' ') %></a></li>          
+          <li><a href="#"><%= Faker::Lorem::words.join(' ') %></a></li>          
+          <li><a href="#"><%= Faker::Lorem::words.join(' ') %></a></li>          
+          <li><a href="#"><%= Faker::Lorem::words.join(' ') %></a></li>          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <section>
     <%= yield %>
   </section>
+
+  <footer>
+    <div class="footer">
+      <p><a href="#">Credits</a></p>
+    </div>
+  </footer>
 
   <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
   <%= javascript_include_tag 'application' %>

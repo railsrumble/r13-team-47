@@ -11,15 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019090752) do
+ActiveRecord::Schema.define(version: 20131019093908) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id"
     t.string   "provider"
     t.string   "uid"
-
-  create_table "users", force: true do |t|
-    t.string   "login"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "ranks", force: true do |t|
@@ -28,6 +27,7 @@ ActiveRecord::Schema.define(version: 20131019090752) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
   add_index "ranks", ["site_id"], name: "index_ranks_on_site_id", using: :btree
 
   create_table "screenshoots", force: true do |t|
@@ -54,6 +54,12 @@ ActiveRecord::Schema.define(version: 20131019090752) do
     t.datetime "updated_at"
   end
 
+  create_table "users", force: true do |t|
+    t.string   "login"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "works", force: true do |t|
     t.string   "name"
     t.string   "description"
@@ -65,4 +71,5 @@ ActiveRecord::Schema.define(version: 20131019090752) do
 
   add_index "works", ["site_id"], name: "index_works_on_site_id", using: :btree
   add_index "works", ["team_id"], name: "index_works_on_team_id", using: :btree
+
 end
