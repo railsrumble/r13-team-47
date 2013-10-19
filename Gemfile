@@ -36,6 +36,10 @@ group :development, :test do
     gem 'railroady'
 end
 
+group :production do
+  gem 'therubyracer'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
