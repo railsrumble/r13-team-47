@@ -5,14 +5,14 @@
   box-shadow: 5px 5px 0px opacify($dark-blue, 1)
   padding: 0.2em
 
-.green-button
-  background: $green
+.button
   padding: 0.3em
   &:link,
   &:visited
     color: white
     text-decoration: none
-    display: block
     width: 100%
-  &:hover
-    background-color: darken($green, 10%)
+  &.green
+    background: $green
+    &:hover
+      background-color: darken($green, 10%)
