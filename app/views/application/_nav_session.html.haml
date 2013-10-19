@@ -4,4 +4,4 @@
       %li= link_to "Sign in with Github", "/auth/github", class: 'green button'
       %li= link_to "Login as a sample user", "#", class: 'green button'
       - if team = Team.random
-        %li= link_to "Visit sample team", team_url(team), class: 'green button'
+        %li= link_to "Visit random team", team_url(team), class: 'green button'
