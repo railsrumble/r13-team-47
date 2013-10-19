@@ -3,8 +3,4 @@
     %h1 Size Matters
     %p= Faker::Lorem::sentences(10).join(' ')
 
-  .nav-session
-    %ul
-      %li.green-button= link_to "Sign in with Github", "/auth/github"
-      %li.green-button= link_to "Sign in with Github", "/auth/github"
-      %li.green-button= link_to "Sign in with Github", "/auth/github"
+  = render 'nav_session'
