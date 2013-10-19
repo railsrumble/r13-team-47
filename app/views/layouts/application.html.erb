@@ -41,25 +41,31 @@
 
   <!-- Add your site or application content here -->
   <header>
-    <div class="nav-main">
-      <nav>
-        <ul>
-          <li><a href="#"><%= Faker::Lorem::words.join(' ') %></a></li>          
-          <li><a href="#"><%= Faker::Lorem::words.join(' ') %></a></li>          
-          <li><a href="#"><%= Faker::Lorem::words.join(' ') %></a></li>          
-          <li><a href="#"><%= Faker::Lorem::words.join(' ') %></a></li>          
-        </ul>
-      </nav>
+    <div class="wrapper">
+      <div class="nav-main">
+        <nav>
+          <ul>
+            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
+            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
+            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
+            <li><a href="#" class="hard-shadow"><%= Faker::Lorem::words.join(' ') %></a></li>          
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
   <section>
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
   </section>
 
   <footer>
-    <div class="footer">
-      <p><a href="#">Credits</a></p>
+    <div class="wrapper">
+      <div class="footer">
+        <p><a href="#">Credits</a></p>
+      </div>
     </div>
   </footer>
 

@@ -1,0 +1,7 @@
+.hard-shadow {
+  display: inline-block;
+  color: white;
+  background: $light-blue;
+  box-shadow: 5px 5px 0px opacify($dark-blue, 1);
+  padding: 0.2em
+}

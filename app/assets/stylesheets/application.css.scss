@@ -5,17 +5,120 @@
 @import "bourbon";
 @import "neat";
 
+@import "block";
 @import "typography";
 @import "navigation";
 
-@import "*";
+@import "sessions";
+@import "web_weight";
+
+%diagonal-separator {
+  position: relative;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+    left: -25%;
+    z-index: -1;
+    width: 150%;
+  }
+}
+
+%diagonal-separator-top {
+  $padding-top: 4em;
+
+  @extend %diagonal-separator;
+
+  padding-top: $padding-top;
+
+  &:before,
+  &:after {
+    top: 0;
+    height: 3 * $padding-top;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  &:after {
+    background: white;
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  &:before {
+    background: $dark-blue;
+    -webkit-transform: rotate(1deg);
+    transform: rotate(1deg);
+  }
+}
+
+%diagonal-separator-bottom {
+  $padding-bottom: 4em;
+
+  @extend %diagonal-separator;
+
+  padding-bottom: $padding-bottom;
+  
+  &:before,
+  &:after {
+    bottom: 0;
+    height: 3 * $padding-bottom;
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+  }
+
+  &:after {
+    background: white;
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  &:before {
+    background: $dark-blue;
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+
+}
 
 body {
   > header,
   > section,
   > footer {
-    @include outer-container;
-    aside { @include span-columns(3); }
-    article { @include span-columns(9); }
+    .wrapper {
+      @include outer-container;
+      
+      aside { 
+        @include span-columns(3); 
+      }
+      
+      article { 
+        @include span-columns(9); 
+      }
+    }
+  }
+
+  > header {
+    @extend %diagonal-separator-bottom;
+
+    background: $light-blue;
+    color: white;
+  }
+
+  > section {
+    @include clearfix;
+
+    background: $light-blue;
+    color: white;
+  }
+
+  > footer {
+    @extend %diagonal-separator-top;
+
+    background: $light-blue;
+    color: $sad-blue;
   }
 }
