@@ -1,0 +1,14 @@
+.team 
+  color: white
+  a 
+    text-decoration: none
+    color: white
+  @media screen and ($tablet-max)
+    width: 45%
+    &:nth-child(even)
+      margin-right: 5%
+  @media screen and ($portable)
+    width: 30%
+    margin-right: 5%
+    &:nth-child(3n+0)
+      margin-right: 0%
