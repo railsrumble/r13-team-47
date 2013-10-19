@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019090752) do
+ActiveRecord::Schema.define(version: 20131019095603) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id"
@@ -22,13 +22,14 @@ ActiveRecord::Schema.define(version: 20131019090752) do
     t.string   "login"
   end
 
-  create_table "ranks", force: true do |t|
+  create_table "scores", force: true do |t|
     t.integer  "points"
     t.integer  "site_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-  add_index "ranks", ["site_id"], name: "index_ranks_on_site_id", using: :btree
+
+  add_index "scores", ["site_id"], name: "index_scores_on_site_id", using: :btree
 
   create_table "screenshoots", force: true do |t|
     t.integer  "rank_id"
