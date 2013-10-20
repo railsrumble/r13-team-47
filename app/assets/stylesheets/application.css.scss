@@ -1,10 +1,10 @@
 @import "reset";
-@import "mixins";
 
 @import "config";
 
 @import "bourbon";
 @import "neat";
+@import "mixins";
 
 @import "block";
 @import "typography";
@@ -15,6 +15,7 @@
 @import "web_weight";
 @import "teams";
 @import "team";
+@import "team-edit";
 
 %diagonal-separator {
   position: relative;
