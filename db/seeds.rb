@@ -53,7 +53,15 @@ end
 
 [
   {name: 'dev.welaika.com', url: 'http://dev.welaika.com'},
-  {name: 'reddit', url: 'http://reddit.com'}
+  {name: 'Biennale Democrazia', url: 'http://biennaledemocrazia.it'},
+  {name: 'Vintage Contemporaneo', url: 'http://vintagecontemporaneo.it/'},
+  {name: '100 + 1 cose da fare in Sardegna', url: 'https://www.101cosedafareinsardegna.it/'},
+  {name: 'Dreher Italy', url: 'http://dreher.it/'},
+  {name: 'EDT', url: 'http://www.edt.it/'},
+  {name: 'L\'Arena Affari casa', url: 'http://casa.larenaffari.it/'},
+  {name: 'Camar S.p.a', url: 'http://www.camar.it/'},
+  {name: 'Intesa San Paolo', url: 'http://www.intesasanpaolo.com/'},
+  {name: 'weLaika Lab', url: 'http://lab.welaika.com/'}
 ].each do |site|
   unless Work.find_by(name: site[:name])
     work = Work.create(name: site[:name])
