@@ -16,10 +16,10 @@
     color: white;
     text-decoration: none;
   }
-  
+
   &.green {
     background: $green;
-  
+
     &:hover {
       background-color: darken($green, 10%);
     }
@@ -94,7 +94,7 @@
        }
       }
      }
-        
+
    @if $fadeout == true{
     @for $i from 1 to $length - 1 {
       @if $type == text or $skew == false{
@@ -137,7 +137,5 @@
 }
 
 .clearfix{
-  width: 100%;
-  display: block;
-  clear: both;
+  @include clearfix;
 }
