@@ -1,5 +1,6 @@
 %h1.title Leaderboard
 - counter = 1
+- @teams ||= []
 - @teams.each do |team|
   .team 
     %h2.name= link_to team.name, team_path(team)
