@@ -1,3 +1,4 @@
+%h2(style = "color: black")= params
 .nav-main
   .logo= image_tag "logo.png", :alt => "Size Matters", height: "120px"
   %nav
@@ -6,17 +7,17 @@
         - if current_user.teams.first && !current_user.teams.first.new_record?
           %li
             %h4= link_to "You, the real #{current_user.login}", team_url(current_user.teams.first), class: 'hard-shadow'
-          %li
+          %li(class="#{is_active('teams', 'edit')}")
             %h4= link_to 'Manage', edit_team_url(current_user.teams.first), class: 'hard-shadow'
         - else
-          %li
+          %li(class="#{is_active('teams', 'new')}")
             %h4= link_to 'Add your team', new_team_url, class: 'hard-shadow'
       - else
-        %li
+        %li(class="#{is_active('web_weight', 'index')}")
           %h4= link_to 'Home', root_url, class: 'hard-shadow'
-      %li
+      %li(class="#{is_active('teams', 'index')} #{is_active('teams', 'show')}")
         %h4= link_to 'Leaderboard', teams_url, class: 'hard-shadow'
-      %li
+      %li(class="#{is_active('web_weight', 'about')}")
         %h4= link_to 'About', '/about/', class: 'hard-shadow'
       %li
         %h4
