@@ -1,18 +1,13 @@
 .hard-shadow {
-  display: inline-block;
-  color: white;
-  background: $light-blue;
-  box-shadow: 5px 5px 0px opacify($dark-blue, 1);
-  padding: 0.2em 0.5em;
-  @include transition(all 0.2s ease-in-out);
-
+  @include hard-shadow($dark_blue);
   &:hover {
-    background: $dark-blue;
+    background: opacify(darken($dark_blue, 15%), 1);
     box-shadow: 0px 0px 0px;
-    
-    //margin: 5px 0 0 5px;
-
   }
+}
+
+.hard-shadow-red {
+  @include hard-shadow($red)
 }
 
 .button {
@@ -41,6 +36,14 @@
       background: darken($red, 15%);
     }
   }
+
+  &.blu {
+    background: $dark_blue;
+
+    &:hover {
+      background: darken($dark_blue, 15%);
+    }
+  }
 }
 
 .clouds {
@@ -56,33 +59,35 @@
   }
 
   &.top {
-    @include transform(rotate(0deg));
-    margin-bottom: -0.5em;
+    position: absolute;
+    top: -75px;
   }
 
   &.bottom {
     @include transform(rotate(180deg));
-    margin-top: -0.5em;
+    position: absolute;
+    bottom: -75px;
   }
-
-  line-height: 0.6;
 }
 
 .works {
   background: $white;
   color: $sad-blue;
   padding: 2em;
+  position: relative;
+  @include span-columns(12);
 
   .work {
-    @include span-columns(3);
-    @include omega(4n);
+    @include span-columns(4);
+    @include omega(3n);
 
-    img {
-      @include span-columns(1 of 3);
+    img, .add {
+      @include span-columns(1 of 4);
+      @include omega()
     }
 
     .content {
-      @include span-columns(2 of 3);
+      @include span-columns(2 of 4);
       @include omega();
 
       #{$all-text-inputs},

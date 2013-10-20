@@ -1,12 +1,12 @@
 form {
+  font-size: 1.2em;
   .input {
     @include outer-container;
 
     margin-bottom: 0.5rem;
 
-    &.team_name, 
+    &.team_name,
     &.team_url {
-      font-size: 2em;
     }
 
     .control-label {

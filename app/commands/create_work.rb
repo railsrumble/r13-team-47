@@ -1,4 +1,4 @@
-class CreateWork < Struct.new(:team, :params)
+class CreateWork < Struct.new(:team, :params, :url)
 
   def self.run(*args)
     new(*args).create
@@ -8,10 +8,6 @@ class CreateWork < Struct.new(:team, :params)
     Work.create(params).tap do |work|
       SiteSaver.run(url, work, team)
     end
-  end
-
-  def url
-    params[:url]
   end
 end
 
