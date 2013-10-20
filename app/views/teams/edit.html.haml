@@ -1,12 +1,17 @@
-= render 'form'
+.team-edit
+  = render 'form'
 
-.green.button.long-shadow-green= 'level ' + @team.level.to_s
-.green.button.long-shadow-green= number_with_delimiter(@team.score).to_s + ' points'
-.red.button.long-shadow-red recalculate
+  .three-buttons-line
+    .green.button.long-shadow-green
+      %h4= 'level ' + @team.level.to_s
+    .green.button.long-shadow-green
+      %h4= number_with_delimiter(@team.score).to_s + ' points'
+    .red.button.long-shadow-red
+      %h4 recalculate
 
-.clouds.top= render 'cloud'
+  .clouds.top= render 'cloud'
 
-= render 'works'
+  = render 'works'
 
-.clouds.bottom= render 'cloud'
+  .clouds.bottom= render 'cloud'
 

@@ -1,8 +1,8 @@
 = render layout: 'wrapper' do
-  %aside= image_tag 'http://placehold.it/100x100'
-  %article
+  %aside= image_tag "http://placehold.it/290x450"
+  %article.home
     .text-block
       %h1.title Size Matters
-      %p= Faker::Lorem::sentences(10).join(' ')
+      %p= Faker::Lorem::sentences(5).join(' ')
 
     = render 'nav_session'

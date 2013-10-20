@@ -16,10 +16,10 @@
     color: white;
     text-decoration: none;
   }
-  
+
   &.green {
     background: $green;
-  
+
     &:hover {
       background-color: darken($green, 10%);
     }
@@ -29,7 +29,7 @@
     background: $red;
 
     &:hover {
-      background: darken($red, 10%);
+      background: darken($red, 15%);
     }
   }
 }
@@ -48,16 +48,21 @@
 
   &.top {
     @include transform(rotate(0deg));
+    margin-bottom: -0.5em;
   }
 
   &.bottom {
     @include transform(rotate(180deg));
+    margin-top: -0.5em;
   }
+
+  line-height: 0.6;
 }
 
 .works {
   background: $white;
   color: $sad-blue;
+  padding: 2em;
 
   .work {
     @include span-columns(3);
@@ -94,15 +99,15 @@
        }
       }
      }
-        
+
    @if $fadeout == true{
     @for $i from 1 to $length - 1 {
       @if $type == text or $skew == false{
         @if $direction == right{
-          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + rgba($color, 1 - $i / $length) + ',';
         }
         @if $direction == left{
-          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + rgba($color, 1 - $i / $length) + ',';
         }
       }
       @if ($type == box) and $skew == true{
@@ -137,7 +142,5 @@
 }
 
 .clearfix{
-  width: 100%;
-  display: block;
-  clear: both;
+  @include clearfix;
 }
