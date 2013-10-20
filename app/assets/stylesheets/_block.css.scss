@@ -71,17 +71,19 @@
   background: $white;
   color: $sad-blue;
   padding: 2em;
+  @include span-columns(12);
 
   .work {
     @include span-columns(4);
     @include omega(3n);
 
-    img {
-      @include span-columns(1 of 3);
+    img, .add {
+      @include span-columns(1 of 4);
+      @include omega()
     }
 
     .content {
-      @include span-columns(2 of 3);
+      @include span-columns(2 of 4);
       @include omega();
 
       #{$all-text-inputs},
