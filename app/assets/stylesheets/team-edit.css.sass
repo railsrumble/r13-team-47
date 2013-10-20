@@ -14,7 +14,12 @@
     @include outer-container
     .button
       @include span-columns(4)
-
+      &.recalculate
+        a
+          display: block
+          width: 100%
+          color: $white
+          text-decoration: none
   .works
     margin-top: -6em
     .work

@@ -11,7 +11,7 @@
         %h4
           %span#team-points= number_with_delimiter(@team.score)
           %span= ' points'
-      .red.button.long-shadow-red
+      .red.button.long-shadow-red.recalculate
         %h4= link_to 'recalculate', team_recalculate_url(@team)
 
   = render 'works'
