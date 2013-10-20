@@ -1,6 +1,6 @@
 class SampleSessionsController < ApplicationController
   def create
-    user = User.where(sample: true).first
+    user = User.create(sample: true, login: 'guest')
 
     session[:user_id] = user.id
 
