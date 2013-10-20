@@ -76,7 +76,7 @@
 .works {
   background: $white;
   color: $sad-blue;
-  padding: 2em;
+  padding: 2em 0;
   position: relative;
   @include span-columns(12);
 
@@ -85,12 +85,12 @@
     @include omega(3n);
 
     img, .add {
-      @include span-columns(1 of 4);
-      @include omega()
+      @include span-columns(1 of 3);
+      @include omega();
     }
 
     .content {
-      @include span-columns(2 of 4);
+      @include span-columns(2 of 3);
       @include omega();
 
       #{$all-text-inputs},
