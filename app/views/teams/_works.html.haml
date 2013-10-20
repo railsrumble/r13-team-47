@@ -7,10 +7,8 @@
       .add.button.red
       .content
         = simple_form_for [@team, Work.new] do |form|
-          %span Work name
-          = form.input_field :name
-          %span Work url
-          = form.input_field :url
+          = form.input_field :name, placeholder: 'Website name'
+          = form.input_field :url, placeholder: 'Website URL'
           = form.button :submit, class: 'hard-shadow-red'
 
     = render partial: @team.works, locals: {show_delete: true}
