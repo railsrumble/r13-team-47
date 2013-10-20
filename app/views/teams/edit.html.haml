@@ -4,10 +4,14 @@
 
     .three-buttons-line
       .green.button.long-shadow-green
-        %h4= 'level ' + @team.level.to_s
+        %h4
+          %span= 'level '
+          %span#team-level= number_with_delimiter(@team.level)
       .green.button.long-shadow-green
-        %h4= number_with_delimiter(@team.score).to_s + ' points'
+        %h4
+          %span#team-points= number_with_delimiter(@team.score)
+          %span= ' points'
       .red.button.long-shadow-red
-        %h4= link_to "recalculate", team_recalculate_url(@team)
+        %h4= link_to 'recalculate', team_recalculate_url(@team)
 
   = render 'works'
