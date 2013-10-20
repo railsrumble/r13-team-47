@@ -3,8 +3,9 @@ class Work < ActiveRecord::Base
   belongs_to :site
 
   delegate :url, :screenshot, :points, to: :site, allow_nil: true
-
   default_scope { order('created_at DESC') } 
+
+  validates :site_id, :uniqueness => { :scope => :team_id }
 
 end
 
