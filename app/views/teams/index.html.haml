@@ -1,15 +1,14 @@
 = render layout: 'wrapper' do
   %h1.title Leaderboard
   - counter = 1
-  - @teams ||= []
   - @teams.each do |team|
     .team 
       %h2.name= link_to team.name, team_path(team)
-      %h3.level= link_to 'level ' + team.level.to_s, team_path(team)
+      %h3.level= link_to "level #{number_with_delimiter(team.level)}", team_path(team)
       .url= link_to team.url, team_path(team)
       .score
         .arrow >
-        = link_to number_with_delimiter(team.score) + ' points', team_path(team), class: 'button green'
+        = link_to "#{number_with_delimiter(team.score)} points", team_path(team), class: 'button green'
       .ribbon
         %span.position= counter.ordinalize
     - counter += 1
