@@ -1,7 +1,7 @@
 class WorksController < ApplicationController
   def create
     @team = Team.find(params[:team_id])
-    CreateWork.run(@team, permitted_params[:work]).tap do |work|
+    CreateWork.run(@team, permitted_params[:work], site_url).tap do |work|
       @team.works << work
     end
 
@@ -17,7 +17,11 @@ class WorksController < ApplicationController
 
   protected
 
+    def site_url
+      params[:work][:url]
+    end
+
     def permitted_params
-      params.permit(work: [:url, :name])
+      params.permit(work: [:name])
     end
 end

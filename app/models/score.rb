@@ -2,7 +2,7 @@ class Score < ActiveRecord::Base
   belongs_to :site
   mount_uploader :screenshot, ScreenshotUploader
 
-  default_scope order(:created_at)
+  default_scope { order(:created_at) }
 
   def push_points(points, team_id)
     update_attributes(points: points)
