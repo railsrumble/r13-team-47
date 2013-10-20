@@ -5,4 +5,6 @@ class Work < ActiveRecord::Base
   delegate :url, to: :site, allow_nil: true
   delegate :screenshot, to: :site, allow_nil: true
 
+  attr_accessor :url
+
 end
