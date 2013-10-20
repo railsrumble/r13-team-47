@@ -1,10 +1,11 @@
-class Ranker < Struct.new(:url)
+class Ranker < Struct.new(:url, :score_id)
 
-  def self.run(*args)
-    new(*args).rank
+  def perform
+    score = Score.find(score_id)
+    score.update_attributes(points: points)
   end
 
-  def rank
+  def points
     rank_engines.inject(0) do |result, engine|
       result + engine.run(url)
     end

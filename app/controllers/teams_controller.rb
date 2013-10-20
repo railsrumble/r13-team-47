@@ -32,7 +32,8 @@ class TeamsController < WebWeightController
   end
 
   protected
-    def  permitted_params
+
+    def permitted_params
       params.permit(team: [:url, :name, :description])
     end
 end

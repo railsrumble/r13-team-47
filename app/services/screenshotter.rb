@@ -1,17 +1,18 @@
-class Screenshotter < Struct.new(:url)
+class Screenshotter < Struct.new(:url, :score_id)
 
-  def self.run(*args)
-    new(*args).screenshot
+  def perform
+    score = Score.find(score_id)
+    score.screenshot = File.open(screenshot)
+    score.save
   end
 
   def screenshot
     driver.navigate.to url
     driver.manage.window.resize_to(default_width,default_height)
-    file = driver.save_screenshot(temp_path)
-    file.path
+    driver.save_screenshot(temp_path).path
   end
-  
-  private 
+
+  private
 
   def default_width
     1024

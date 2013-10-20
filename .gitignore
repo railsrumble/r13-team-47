@@ -16,4 +16,5 @@
 /tmp
 
 /doc
+/public/uploads
 database.yml

@@ -78,6 +78,8 @@ end
 
 group :development, :test do
     gem 'railroady'
+    gem 'pry-rails'
+    gem 'pry-plus'
 end
 
 group :production do
