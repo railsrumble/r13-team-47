@@ -64,9 +64,13 @@ User.where(sample: true).each do |sample_user|
 end
 
 alice = User.create(login: 'alice', sample: true)
+team = Team.create(name: 'Alice in Wanderland', description: Faker::Lorem.paragraphs(4).join("\n\n"), url: 'http://www.lipsum.com/')
+google = Work.create(name: 'Google', url: 'http://www.google.com')
+yahoo = Work.create(name: 'Yahoo!', url: 'http://www.yahoo.com')
+alexa = Work.create(name: 'Alexa', url: 'http://www.alexa.com')
 
-team = alice.teams.create(name: 'Alice in Wanderland')
+alice.teams << team
 
-google = team.sites.create(url: 'http://www.google.com')
-yahoo = team.sites.create(url: 'http://www.yahoo.com')
-alexa = team.sites.create(url: 'http://www.alexa.com')
+team.works << google
+team.works << yahoo
+team.works << alexa
