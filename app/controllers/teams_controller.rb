@@ -20,7 +20,9 @@ class TeamsController < WebWeightController
   end
 
   def update
-    @team = Team.find(params[:id]).update(permitted_params[:team])
+    @team = Team.find(params[:id]).tap do |team|
+      team.update(permitted_params[:team])
+    end
 
     redirect_to team_url(@team)
   end
