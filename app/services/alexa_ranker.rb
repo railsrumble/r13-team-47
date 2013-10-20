@@ -9,7 +9,7 @@ class AlexaRanker < Struct.new(:url)
   end
 
   def normalize
-    1.0 / fetch * bottom_position
+    (1.0 / fetch * bottom_position) + 5
   end
 
   def fetch
