@@ -7,4 +7,4 @@
     %div= link_to "Take a look", work.url, {target: "_blank", class: "hard-shadow"}
     %div.site-points= work.formatted_points
   - if show_delete
-    = button_to "delete", [@team, work], method: 'delete', confirm: "You're deleting your hard work! Are you sure?"
+    = button_to "X", [@team, work], method: 'delete', confirm: "You're deleting your hard work! Are you sure?", class: 'delete hard-shadow-red'
