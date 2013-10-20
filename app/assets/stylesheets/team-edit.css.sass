@@ -20,60 +20,59 @@
           width: 100%
           color: $white
           text-decoration: none
-  .works
-    margin-top: -6em
-    .work
-      position: relative
-      overflow: hidden
-      margin-bottom: 2em
-      &.new
-        padding-bottom: 1em
-        .btn
-          margin-left: 15%
-          padding: 0.2em
-          font-size: 0.9em
-      .button
-        width: 80px
-        height: 80px
-        background-color: $red
-      .content
-        a
-          text-decoration: none
-          color: white
-        .site-points
-          margin: 0.5em 0
-        > div
-          font-size: 1em
-          color: $sad_blue
-          text-align: center
-          font-weight: bold
-          padding: 0.1em
-          width: 100%
-          &:nth-child(2)
-            font-size: 0.8em
-        form
-          display: inline-block
-          font-size: 1em
-          input
-            text-align: center
-            border: none
-      input[type='submit'].delete
-        border: medium none
-        color: #FFFFFF
-        height: 1.5em
+
+.works
+  margin-top: -6em
+  .work
+    position: relative
+    overflow: hidden
+    &.new
+      padding-bottom: 1em
+      .btn
+        margin-left: 15%
         padding: 0.2em
-        position: absolute
-        right: 0.5em
-        top: 0
-        width: 1.5em
+        font-size: 0.9em
+    .button
+      width: 80px
+      height: 80px
+      background-color: $red
+    .content
+      a
+        text-decoration: none
+        color: white
+      .site-points
+        margin: 0.5em 0
+      > div
+        font-size: 1em
+        color: $sad_blue
+        text-align: center
+        font-weight: bold
+        padding: 0.1em
+        width: 100%
+        &:nth-child(2)
+          font-size: 0.8em
+      form
+        display: inline-block
+        font-size: 1em
+        input
+          text-align: center
+          border: none
+    input[type='submit'].delete
+      border: medium none
+      color: #FFFFFF
+      height: 1.5em
+      padding: 0.2em
+      position: absolute
+      right: 0.5em
+      top: 0
+      width: 1.5em
 
-
-      img
-        width: 90px
-        @include transition(all 0.5s ease-in-out)
-        height: auto
-        @include long-shadow(box, darken(#ecf0f1, 3%), 150, false, false)
-        &.spinner
-          padding: 1em
-          background-color: $white
+    img
+      width: 90px
+      @include transition(all 0.5s ease-in-out)
+      height: auto
+      @include long-shadow(box, darken(#ecf0f1, 3%), 150, false, false)
+      &.spinner
+        padding: 1em
+        background-color: $white
 

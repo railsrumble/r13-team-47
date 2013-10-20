@@ -1,20 +1,22 @@
-= render layout: 'wrapper' do
-  - team = present(@team)
-  .team_detail
-    .wrapper
-      %h1= team.name
-      %h2= link_to team.host, team.url
-      %article.full!= markdown(team.description)
-      .clearfix
-      .three-buttons-line
-        .green.button.long-shadow-green
-          %h3= 'level ' + team.level.to_s
-        .green.button.long-shadow-green
-          %h3= number_with_delimiter(team.score).to_s + ' points'
-        .green.button.long-shadow-green
-          %h3= team.position_in_leaderboard.ordinalize
+.team_detail
+  = render layout: 'wrapper' do
+    - team = present(@team)
+    %h1= team.name
+    %h2= link_to team.host, team.url
+    %article.full!= markdown(team.description)
+    .clearfix
+    .three-buttons-line
+      .green.button.long-shadow-green
+        %h3= 'level ' + team.level.to_s
+      .green.button.long-shadow-green
+        %h3= number_with_delimiter(team.score).to_s + ' points'
+      .green.button.long-shadow-green
+        %h3= team.position_in_leaderboard.ordinalize
 
-- if @team.works.any?
-  .works
-    = render layout: 'wrapper' do
-      = render partial: @team.works, locals: {show_delete: false}
+
+  - if @team.works.any?
+    .works
+      .clouds.top= render 'cloud'
+      .clouds.bottom= render 'cloud'
+      = render layout: 'wrapper' do
+        = render partial: @team.works, locals: {show_delete: false}
