@@ -11,5 +11,9 @@ class Site < ActiveRecord::Base
     scores.last.try(:created_at)
   end
 
+  def screenshot
+    scores.last.screenshot
+  end
+
 end
 

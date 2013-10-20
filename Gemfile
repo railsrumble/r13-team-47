@@ -63,6 +63,8 @@ gem 'redcarpet'
 
 gem 'airbrake'
 
+gem 'showcase'
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
