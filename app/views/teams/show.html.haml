@@ -3,11 +3,11 @@
   .team_detail
     %h1= team.name
     %h2= team.url
-    %article.full= markdown(team.description)
+    %article.full!= markdown(team.description)
     .clearfix
-    .green.button.long-shadow= 'level ' + team.level.to_s
-    .green.button.long-shadow= number_with_delimiter(team.score).to_s + ' points'
-    .green.button.long-shadow= 3.ordinalize
+    .green.button.long-shadow-green= 'level ' + team.level.to_s
+    .green.button.long-shadow-green= number_with_delimiter(team.score).to_s + ' points'
+    .green.button.long-shadow-green= 3.ordinalize
     
 .clouds.top= render 'cloud'
 

@@ -129,8 +129,11 @@
   @if $type == 'text' {text-shadow: $shadow;}
 }
 
-.long-shadow {
+.long-shadow-green {
   @include long-shadow(box, darken($green, 20%), 100, false, false);
+}
+.long-shadow-red {
+  @include long-shadow(box, darken($red, 20%), 100, false, false);
 }
 
 .clearfix{

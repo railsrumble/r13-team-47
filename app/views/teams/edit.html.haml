@@ -1,5 +1,9 @@
 = render 'form'
 
+.green.button.long-shadow-green= 'level ' + @team.level.to_s
+.green.button.long-shadow-green= number_with_delimiter(@team.score).to_s + ' points'
+.red.button.long-shadow-red recalculate
+
 .clouds.top= render 'cloud'
 
 = render 'works'
