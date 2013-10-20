@@ -11,6 +11,6 @@ class Team < ActiveRecord::Base
   end
 
   def position_in_leaderboard
-    Team.where('score <= ?', score).count
+    Team.where('score >= ?', score).count
   end 
 end
