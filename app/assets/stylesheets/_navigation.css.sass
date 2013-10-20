@@ -1,22 +1,27 @@
 .nav-main
   .logo
     position: absolute
-    left: 2em
     top: -0.6em
   > nav
+    height: 3em
     > ul
+      float: right
       padding: 0
       margin: 0
 
       > li
         @include inline-block
-
+        float: left
         margin-right: 1em
+        @include transition(all 0.2s ease-in-out)
 
         a
           &:link, &:hover, &:active, &:visited
             color: white
             text-decoration: none
+
+        &:hover
+          margin: 5px calc(1em - 5px) 0 5px
 
 .nav-session
   > nav
@@ -26,6 +31,5 @@
 
       > li
         list-style-type: none
-        float: right
         clear: right
         margin-bottom: 1em

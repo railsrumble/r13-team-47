@@ -124,6 +124,14 @@ body {
           @include span-columns(12);
         }
         &.home {
+          h1.title {
+            line-height: 1em;
+          }
+          p{
+            font-family: Lato;
+            font-weight: lighter;
+            margin: 0.8em 0;
+          }
           @include span-columns(6);
           text-align: right;
           padding-right: 1em;
@@ -134,8 +142,8 @@ body {
 
   > header {
     @extend %diagonal-separator-bottom;
-
-    text-align: right;
+    overflow: hidden;
+    //text-align: right;
     background: $light-blue;
     color: white;
     margin-top: 0.5em;
@@ -172,4 +180,9 @@ body {
       }
     }
   }
+}
+
+#rumble2013 {
+  bottom: 0;
+  top: auto !important;
 }

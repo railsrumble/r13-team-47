@@ -1,5 +1,6 @@
 .nav-main
-  .logo= image_tag "logo.png", :alt => "Size Matters", height: "120px"
+  %a{:href => root_url}
+    .logo= image_tag "logo.png", :alt => "Size Matters", height: "120px"
   %nav
     %ul
       - if current_user

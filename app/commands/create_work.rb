@@ -1,4 +1,4 @@
-class CreateWork < Struct.new(:team, :params)
+class CreateWork < Struct.new(:team, :params, :url)
 
   def self.run(*args)
     new(*args).create
