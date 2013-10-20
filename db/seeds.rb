@@ -55,22 +55,22 @@ end
 # Sample users
 # # # # # # # # #
 
-User.where(sample: true).each do |sample_user|
-  sample_user.teams.each do |sample_team|
-    sample_team.works.map(&:destroy)
-  end
-  sample_user.teams.map(&:destroy)
-  sample_user.destroy
-end
+# User.where(sample: true).each do |sample_user|
+#   sample_user.teams.each do |sample_team|
+#     sample_team.works.map(&:destroy)
+#   end
+#   sample_user.teams.map(&:destroy)
+#   sample_user.destroy
+# end
 
-alice = User.create(login: 'alice', sample: true)
-team = Team.create(name: 'Alice in Wanderland', description: Faker::Lorem.paragraphs(4).join("\n\n"), url: 'http://www.lipsum.com/')
-google = Work.create(name: 'Google', url: 'http://www.google.com')
-yahoo = Work.create(name: 'Yahoo!', url: 'http://www.yahoo.com')
-alexa = Work.create(name: 'Alexa', url: 'http://www.alexa.com')
+# alice = User.create(login: 'alice', sample: true)
+# team = Team.create(name: 'Alice in Wanderland', description: Faker::Lorem.paragraphs(4).join("\n\n"), url: 'http://www.lipsum.com/')
+# google = Work.create(name: 'Google', url: 'http://www.google.com')
+# yahoo = Work.create(name: 'Yahoo!', url: 'http://www.yahoo.com')
+# alexa = Work.create(name: 'Alexa', url: 'http://www.alexa.com')
 
-alice.teams << team
+# alice.teams << team
 
-team.works << google
-team.works << yahoo
-team.works << alexa
+# team.works << google
+# team.works << yahoo
+# team.works << alexa
