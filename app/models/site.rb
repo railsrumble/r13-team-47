@@ -4,7 +4,7 @@ class Site < ActiveRecord::Base
   has_many :scores
 
   def need_score_refresh?
-    last_score_at ? last_score_at < 1.week.ago : true
+    last_score_at ? last_score_at < 8.week.ago : true
   end
 
   def last_score_at
