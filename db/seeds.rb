@@ -51,6 +51,16 @@ unless Team.find_by(name: 'SEBP Team')
               description: Faker::Lorem::sentences(15).join(' ')
 end
 
+[
+  {name: 'dev.welaika.com', url: 'http://dev.welaika.com'},
+  {name: 'reddit', url: 'http://reddit.com'}
+].each do |site|
+  unless Work.find_by(name: site[:name])
+    work = Work.create(name: site[:name])
+    SiteSaver.run(site[:url], work)
+  end
+end
+
 # # # # # # # # #
 # Sample users
 # # # # # # # # #
