@@ -55,22 +55,22 @@
   }
 
   &.top {
-    @include transform(rotate(0deg));
-    margin-bottom: -0.5em;
+    position: absolute;
+    top: -75px;
   }
 
   &.bottom {
     @include transform(rotate(180deg));
-    margin-top: -0.5em;
+    position: absolute;
+    bottom: -75px;
   }
-
-  line-height: 0.6;
 }
 
 .works {
   background: $white;
   color: $sad-blue;
   padding: 2em;
+  position: relative;
   @include span-columns(12);
 
   .work {
