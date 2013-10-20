@@ -2,7 +2,8 @@ PinkTeam::Application.routes.draw do
   root :to => "web_weight#index"
   
   get '/auth/:provider/callback', to: 'sessions#create'
-  get "/logout/" => "sessions#destroy", :as => :logout
+  get '/auth/sample', to: 'sample_sessions#create', as: 'create_sample_session'
+  get "/logout/", to: "sessions#destroy", as: 'logout'
 
   resources :teams do
     resources :works
