@@ -32,6 +32,14 @@
       background: darken($red, 15%);
     }
   }
+
+  &.blu {
+    background: $dark_blue;
+
+    &:hover {
+      background: darken($dark_blue, 15%);
+    }
+  }
 }
 
 .clouds {
