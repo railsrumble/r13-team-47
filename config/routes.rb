@@ -4,6 +4,7 @@ PinkTeam::Application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/sample', to: 'sample_sessions#create', as: 'create_sample_session'
   get "/logout/", to: "sessions#destroy", as: 'logout'
+  get "/teams/:id/recalculate", to: 'teams#recalculate', as: 'team_recalculate'
 
   resources :teams do
     resources :works

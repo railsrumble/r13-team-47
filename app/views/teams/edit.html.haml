@@ -8,6 +8,6 @@
       .green.button.long-shadow-green
         %h4= number_with_delimiter(@team.score).to_s + ' points'
       .red.button.long-shadow-red
-        %h4 recalculate
+        %h4= link_to "recalculate", team_recalculate_url(@team)
 
   = render 'works'

@@ -31,6 +31,13 @@ class TeamsController < WebWeightController
     @team = Team.find(params[:id])
   end
 
+  def recalculate
+    @team = Team.find(params[:id])
+    TeamRankUpdater.run(@team)
+
+    redirect_to edit_team_url(@team)
+  end
+
   protected
 
     def permitted_params
