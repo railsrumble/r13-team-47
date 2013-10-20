@@ -2,4 +2,7 @@
   = image_tag("http://placehold.it/320x320")
   .content
     %div= work.name
-    %div= work.url
+    - if work.url?
+      %div= link_to work.url, work.url
+  - if show_delete
+    = button_to "delete", [@team, work], method: 'delete', confirm: "You're deleting your hard work! Are you sure?"

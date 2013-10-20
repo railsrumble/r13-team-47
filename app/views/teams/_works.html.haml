@@ -8,4 +8,4 @@
           = form.input_field :url
           = form.button :submit, class: 'button red'
 
-    = render partial: @team.works
+    = render partial: @team.works, locals: {show_delete: true}

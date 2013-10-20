@@ -13,6 +13,6 @@
 
 .works
   = render layout: 'wrapper' do
-    = render partial: @team.works
+    = render partial: @team.works, locals: {show_delete: false}
 
 .clouds.bottom= render 'cloud'
