@@ -19,6 +19,10 @@
 
 .hard-shadow-red {
   @include hard-shadow($red);
+  &:hover {
+  background: opacify(darken($red, 15%), 1);
+  box-shadow: 0px 0px 0px;
+}
 }
 
 .button {
