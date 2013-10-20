@@ -16,3 +16,34 @@
     margin-bottom: 8em
     .button
       @include span-columns(4)
+
+  .works
+    .work
+      position: relative
+      overflow: hidden
+      .button
+        width: 80px
+        height: 80px
+        background-color: $red
+      .content
+        a
+          text-decoration: none
+          color: white
+        .site-points
+          margin: 0.5em 0
+        > div
+          font-size: 1em
+          color: $sad_blue
+          text-align: center
+          font-weight: bold
+          padding: 0.1em
+          width: 100%
+      input
+        position: absolute
+        top: -0.3em
+        right: -0.3em
+        display: inline-block
+        margin-right: 3%
+        text-align: center
+      img
+        width: 90px
