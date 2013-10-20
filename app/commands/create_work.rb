@@ -6,7 +6,7 @@ class CreateWork < Struct.new(:team, :params)
 
   def create
     Work.create(params).tap do |work|
-      SiteSaver.run(url, work)
+      SiteSaver.run(url, work, team)
     end
   end
 

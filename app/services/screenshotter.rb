@@ -1,9 +1,8 @@
-class Screenshotter < Struct.new(:url, :score_id)
+class Screenshotter < Struct.new(:url, :score_id, :team_id)
 
   def perform
     score = Score.find(score_id)
-    score.screenshot = File.open(screenshot)
-    score.save
+    score.push_screenshot(screenshot, team_id)
   end
 
   def screenshot

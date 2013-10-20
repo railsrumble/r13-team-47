@@ -8,11 +8,21 @@ class Site < ActiveRecord::Base
   end
 
   def last_score_at
-    scores.last.try(:created_at)
+    last_score.try(:created_at)
   end
 
   def screenshot
-    scores.last.screenshot
+    last_score.screenshot
+  end
+
+  def points
+    last_score.points
+  end
+
+  private
+
+  def last_score
+    scores.last
   end
 
 end
