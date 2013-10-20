@@ -3,12 +3,23 @@
   color: white;
   background: $light-blue;
   box-shadow: 5px 5px 0px opacify($dark-blue, 1);
-  padding: 0.2em;
+  padding: 0.2em 0.5em;
+  @include transition(all 0.2s ease-in-out);
+
+  &:hover {
+    background: $dark-blue;
+    box-shadow: 0px 0px 0px;
+    
+    //margin: 5px 0 0 5px;
+
+  }
 }
+
+
 
 .button {
   border: 0;
-  padding: 0.3em;
+  padding: 0.3em 0.5em;
 
   &,
   &:link,

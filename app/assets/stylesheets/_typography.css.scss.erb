@@ -23,6 +23,28 @@ $text-font-family: 'GeoSansLight';
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Lato';
+    src: url("<%= asset_path('lato-lig-webfont.eot') %>");
+    src: url("<%= asset_path('lato-lig-webfont.eot?#iefix') %>") format('embedded-opentype'),
+         url("<%= asset_path('lato-lig-webfont.woff') %>") format('woff'),
+         url("<%= asset_path('lato-lig-webfont.ttf') %>") format('truetype'),
+         url("<%= asset_path('lato-lig-webfont.svg#latolight') %>") format('svg');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url("<%= asset_path('lato-reg-webfont.eot') %>");
+    src: url("<%= asset_path('lato-reg-webfont.eot?#iefix') %>") format('embedded-opentype'),
+         url("<%= asset_path('lato-reg-webfont.woff') %>") format('woff'),
+         url("<%= asset_path('lato-reg-webfont.ttf') %>") format('truetype'),
+         url("<%= asset_path('lato-reg-webfont.svg#latoregular') %>") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   font-family: $text-font-family;
 }
