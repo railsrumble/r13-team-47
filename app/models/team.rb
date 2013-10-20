@@ -9,4 +9,8 @@ class Team < ActiveRecord::Base
   def self.random
     order("RAND()").first
   end
+
+  def position_in_leaderboard
+    Team.where('score <= ?', score).count
+  end 
 end

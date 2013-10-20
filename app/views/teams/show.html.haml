@@ -11,7 +11,7 @@
       .green.button.long-shadow-green
         %h3= number_with_delimiter(team.score).to_s + ' points'
       .green.button.long-shadow-green
-        %h3= 3.ordinalize
+        %h3= team.position_in_leaderboard.ordinalize
 
 .clouds.top= render 'cloud'
 
