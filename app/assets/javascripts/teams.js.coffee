@@ -16,9 +16,9 @@ $ ->
     channel = pusher.subscribe("team_#{teamId}")
 
     channel.bind "push_screenshot", (data) ->
-      # console?.log(data)
+      console?.log(data)
       push_screenshot(data)
 
     channel.bind "push_points", (data) ->
-      # console?.log(data)
+      console?.log(data)
       push_points(data)

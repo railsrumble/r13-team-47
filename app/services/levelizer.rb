@@ -1,10 +1,6 @@
-class Levelizer < Struct.new(:score)
+class Levelizer
 
-  def self.run(*args)
-    new(*args).level
-  end
-
-  def level
+  def self.run(score)
     Math.sqrt(score) * 0.3
   end
 

@@ -1,4 +1,4 @@
-class SiteSaver < Struct.new(:url, :work, :team)
+class SiteSaver < Struct.new(:url, :work)
 
   def self.run(*args)
     new(*args).save
@@ -13,8 +13,8 @@ class SiteSaver < Struct.new(:url, :work, :team)
   def refresh_score(site)
     if site.need_score_refresh?
       score = Score.create(site: site)
-      Delayed::Job.enqueue Ranker.new(url, score.id, team.id)
-      Delayed::Job.enqueue Screenshotter.new(url, score.id, team.id)
+      Delayed::Job.enqueue Ranker.new(url, score.id, work.team_id)
+      Delayed::Job.enqueue Screenshotter.new(url, score.id, work.team_id)
     end
   end
 
