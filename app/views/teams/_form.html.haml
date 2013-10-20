@@ -1,0 +1,6 @@
+= simple_form_for @team do |f|
+  = f.input :name
+  = f.input :url
+  = f.input :description, hint: 'Yes, of course you can use markdown.'
+  .btns
+    = f.button :submit, class: 'button red'
