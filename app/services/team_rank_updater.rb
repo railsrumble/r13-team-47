@@ -9,7 +9,7 @@ class TeamRankUpdater < Struct.new(:team)
   end
 
   def score
-    @score ||= team.sites.map(&:scores).sum
+    @score ||= team.sites.map(&:points).compact.sum
   end
 
   def level

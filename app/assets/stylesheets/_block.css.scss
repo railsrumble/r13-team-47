@@ -13,8 +13,12 @@
   }
 }
 
+.hard-shadow {
+  @include hard-shadow($dark_blue);
+}
+
 .hard-shadow-red {
-  @include hard-shadow($red)
+  @include hard-shadow($red);
 }
 
 .button {
@@ -56,7 +60,7 @@
 .clouds {
   svg {
     width: 200vw;
-    height: 8vw;
+    height: 5em;
     margin-left: -50vw;
 
     path {
@@ -80,7 +84,7 @@
 .works {
   background: $white;
   color: $sad-blue;
-  padding: 2em;
+  padding: 2em 0;
   position: relative;
   @include span-columns(12);
 
@@ -89,12 +93,12 @@
     @include omega(3n);
 
     img, .add {
-      @include span-columns(1 of 4);
-      @include omega()
+      @include span-columns(1 of 3);
+      @include omega();
     }
 
     .content {
-      @include span-columns(2 of 4);
+      @include span-columns(2 of 3);
       @include omega();
 
       #{$all-text-inputs},

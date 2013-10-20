@@ -1,7 +1,11 @@
 class WorkPresenter < Showcase::Presenter
 
   def thumb
-    h.image_tag object.screenshot.thumb, class: "site-thumb"
+    if object.screenshot.blank?
+      h.image_tag 'spinner.gif', class: "site-thumb spinner"
+    else
+      h.image_tag object.screenshot.thumb, class: "site-thumb"
+    end
   end
 
   def host

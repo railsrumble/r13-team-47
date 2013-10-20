@@ -4,9 +4,13 @@ class Team < ActiveRecord::Base
 
   has_and_belongs_to_many :users
 
-  default_scope :order => 'score DESC'
+  default_scope { order('score DESC') }
 
   def self.random
     order("RAND()").first
   end
+
+  def position_in_leaderboard
+    Team.where('score <= ?', score).count
+  end 
 end

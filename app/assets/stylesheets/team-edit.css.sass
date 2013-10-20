@@ -16,9 +16,16 @@
       @include span-columns(4)
 
   .works
+    margin-top: -6em
     .work
       position: relative
       overflow: hidden
+      &.new
+        padding-bottom: 1em
+        .btn
+          margin-left: 15%
+          padding: 0.2em
+          font-size: 0.9em
       .button
         width: 80px
         height: 80px
@@ -36,12 +43,21 @@
           font-weight: bold
           padding: 0.1em
           width: 100%
-      input
-        position: absolute
-        top: -0.3em
-        right: -0.3em
-        display: inline-block
-        margin-right: 3%
-        text-align: center
+          &:nth-child(2)
+            font-size: 0.8em
+        form
+          display: inline-block
+          font-size: 1em
+          input
+            text-align: center
+            border: none
+
       img
         width: 90px
+        @include transition(all 0.5s ease-in-out)
+        height: auto
+        @include long-shadow(box, darken(#ecf0f1, 3%), 150, false, false)
+        &.spinner
+          padding: 1em
+          background-color: $white
+

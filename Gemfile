@@ -53,10 +53,6 @@ gem 'mini_magick'
 
 gem 'simple_form'
 
-gem 'friendly_id'
-
-gem 'simple_form'
-
 gem 'cancan'
 
 gem 'redcarpet'

@@ -12,7 +12,7 @@ class WorksController < ApplicationController
     @team.works.find(params[:id]).destroy
     TeamRankUpdater.run(@team)
 
-    redirect_to team_url(@team)
+    redirect_to edit_team_url(@team)
   end
 
 end
