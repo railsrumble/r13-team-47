@@ -99,10 +99,10 @@
     @for $i from 1 to $length - 1 {
       @if $type == text or $skew == false{
         @if $direction == right{
-          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+          $shadow: $shadow + $i + 'px ' + $i + 'px 0 ' + rgba($color, 1 - $i / $length) + ',';
         }
         @if $direction == left{
-          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' +       rgba($color, 1 - $i / $length) + ',';
+          $shadow: $shadow + $i * -1 + 'px ' + $i + 'px 0 ' + rgba($color, 1 - $i / $length) + ',';
         }
       }
       @if ($type == box) and $skew == true{
