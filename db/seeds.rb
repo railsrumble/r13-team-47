@@ -35,14 +35,6 @@ unless Team.find_by(name: 'Muppet')
               description: Faker::Lorem::sentences(5).join(' ')
 end
 
-unless Team.find_by(name: 'Long team name for test')
-  Team.create name: 'Long team name for test',
-              url: 'http://ltnft.com',
-              level: 0,
-              score: 0,
-              description: Faker::Lorem::sentences(15).join(' ')
-end
-
 unless Team.find_by(name: 'SEBP Team')
   Team.create name: 'SEBP Team',
               url: 'http://sebp.example.com',
@@ -55,8 +47,9 @@ sites = [
   {name: 'dev.welaika.com', url: 'http://dev.welaika.com'},
   {name: 'Biennale Democrazia', url: 'http://biennaledemocrazia.it'},
   {name: 'Vintage Contemporaneo', url: 'http://vintagecontemporaneo.it/'},
-  {name: '100 + 1 cose da fare in Sardegna', url: 'https://www.101cosedafareinsardegna.it/'},
+  {name: 'Libera', url: 'http://libera.it/'},
   {name: 'Dreher Italy', url: 'http://dreher.it/'},
+  {name: 'SASS', url: 'http://sass-lang.com/'},
   {name: 'EDT', url: 'http://www.edt.it/'},
   {name: 'L\'Arena Affari casa', url: 'http://casa.larenaffari.it/'},
   {name: 'Camar S.p.a', url: 'http://www.camar.it/'},
