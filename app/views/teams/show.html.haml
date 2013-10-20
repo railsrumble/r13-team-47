@@ -1,10 +1,18 @@
-- team = @team
-.team_detail
-  %h1= team.name
-  %h2= team.url
-  %article.full= markdown(team.description)
-  .clearfix
-  .green.button.long-shadow= 'level ' + team.level.to_s
-  .green.button.long-shadow= team.score.to_s + ' points'
-  .green.button.long-shadow= 3.ordinalize
-= render 'works'
+= render layout: 'wrapper' do
+  - team = @team
+  .team_detail
+    %h1= team.name
+    %h2= team.url
+    %article.full= markdown(team.description)
+    .clearfix
+    .green.button.long-shadow= 'level ' + team.level.to_s
+    .green.button.long-shadow= team.score.to_s + ' points'
+    .green.button.long-shadow= 3.ordinalize
+    
+.clouds.top= render 'cloud'
+
+.works
+  = render layout: 'wrapper' do
+    = render partial: @team.works
+
+.clouds.bottom= render 'cloud'

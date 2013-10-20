@@ -1,7 +1,5 @@
 form {
   .input {
-    $input-padding: 0.25rem;
-
     @include outer-container;
 
     margin-bottom: 0.5rem;

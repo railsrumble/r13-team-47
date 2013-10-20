@@ -34,6 +34,52 @@
   }
 }
 
+.clouds {
+  svg {
+    width: 200vw;
+    height: 8vw;
+    margin-left: -50vw;
+
+    path {
+      fill: $white;
+      stroke: $white;
+    }
+  }
+
+  &.top {
+    @include transform(rotate(0deg));
+  }
+
+  &.bottom {
+    @include transform(rotate(180deg));
+  }
+}
+
+.works {
+  background: $white;
+  color: $sad-blue;
+
+  .work {
+    @include span-columns(3);
+    @include omega(4n);
+
+    img {
+      @include span-columns(1 of 3);
+    }
+
+    .content {
+      @include span-columns(2 of 3);
+      @include omega();
+
+      #{$all-text-inputs},
+      textarea {
+        width: 100%;
+        padding: $input-padding;
+      }
+    }
+  }
+}
+
 @mixin long-shadow($type, $color, $length, $fadeout: true, $skew: false, $direction: right){
   $shadow: '';
   @if $skew == false or $type == text{

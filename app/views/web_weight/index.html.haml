@@ -1,7 +1,8 @@
-%aside= image_tag 'http://placehold.it/100x100'
-%article
-  .text-block
-    %h1.title Size Matters
-    %p= Faker::Lorem::sentences(10).join(' ')
+= render layout: 'wrapper' do
+  %aside= image_tag 'http://placehold.it/100x100'
+  %article
+    .text-block
+      %h1.title Size Matters
+      %p= Faker::Lorem::sentences(10).join(' ')
 
-  = render 'nav_session'
+    = render 'nav_session'

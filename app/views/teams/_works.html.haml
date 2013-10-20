@@ -1,0 +1,11 @@
+.works
+  = render layout: 'wrapper' do
+    .media.work.new
+      = image_tag("http://placehold.it/80x80")
+      .content
+        = simple_form_for [@team, Work.new] do |form|
+          = form.input_field :name
+          = form.input_field :url
+          = form.button :submit, class: 'button red'
+
+    = render partial: @team.works

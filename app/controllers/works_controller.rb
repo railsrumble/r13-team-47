@@ -1,5 +1,13 @@
 class WorksController < ApplicationController
-  inherit_resources
+  def create
+    @team = Team.find(params[:team_id])
+    @team.works.create(permitted_params[:work])
 
-  belongs_to :team
+    redirect_to team_url(@team)
+  end
+
+  protected
+    def  permitted_params
+      params.permit(work: [:url, :name])
+    end
 end
