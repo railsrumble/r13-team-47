@@ -15,8 +15,9 @@
 
 .clouds.top= render 'cloud'
 
-.works
-  = render layout: 'wrapper' do
-    = render partial: @team.works, locals: {show_delete: false}
+- if @team.works.any?
+  .works
+    = render layout: 'wrapper' do
+      = render partial: @team.works, locals: {show_delete: false}
 
-.clouds.bottom= render 'cloud'
+  .clouds.bottom= render 'cloud'
