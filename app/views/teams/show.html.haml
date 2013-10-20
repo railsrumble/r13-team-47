@@ -5,12 +5,13 @@
     %h2= team.url
     %article.full!= markdown(team.description)
     .clearfix
-    .green.button.long-shadow-green
-      %h3= 'level ' + team.level.to_s
-    .green.button.long-shadow-green
-      %h3= number_with_delimiter(team.score).to_s + ' points'
-    .green.button.long-shadow-green
-      %h3= 3.ordinalize
+    .three-buttons-line
+      .green.button.long-shadow-green
+        %h3= 'level ' + team.level.to_s
+      .green.button.long-shadow-green
+        %h3= number_with_delimiter(team.score).to_s + ' points'
+      .green.button.long-shadow-green
+        %h3= 3.ordinalize
 
 .clouds.top= render 'cloud'
 
