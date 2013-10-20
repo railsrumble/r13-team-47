@@ -29,7 +29,7 @@
     background: $red;
 
     &:hover {
-      background: darken($red, 10%);
+      background: darken($red, 15%);
     }
   }
 }
@@ -48,16 +48,21 @@
 
   &.top {
     @include transform(rotate(0deg));
+    margin-bottom: -0.5em;
   }
 
   &.bottom {
     @include transform(rotate(180deg));
+    margin-top: -0.5em;
   }
+
+  line-height: 0.6;
 }
 
 .works {
   background: $white;
   color: $sad-blue;
+  padding: 2em;
 
   .work {
     @include span-columns(3);
