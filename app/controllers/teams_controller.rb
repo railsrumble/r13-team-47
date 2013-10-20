@@ -26,7 +26,7 @@ class TeamsController < WebWeightController
   end
 
   def show
-    @team = current_user.teams.first
+    @team = Team.find(params[:id])
   end
 
   protected
